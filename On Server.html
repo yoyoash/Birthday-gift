@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Nikita Didi!</title>
+    <style>
+        body {
+            background-color: #ffebf0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            color: #ff4081;
+            padding: 0;
+            margin: 0;
+            transition: background-color 1s ease-in-out;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+            animation: fadeIn 3s ease-in-out infinite alternate;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 15px;
+            animation: bounce 2s infinite;
+        }
+
+        .balloons {
+            position: relative;
+            margin-top: 20px;
+            height: 200px;
+        }
+
+        .balloon {
+            width: 80px;
+            height: 120px;
+            background-color: #ff4081;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .balloon:nth-child(2) {
+            left: 30%;
+            background-color: #f8bbd0;
+            animation-delay: 1s;
+        }
+
+        .balloon:nth-child(3) {
+            left: 70%;
+            background-color: #ff80ab;
+            animation-delay: 2s;
+        }
+
+        .image-container {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 250px;
+            border: 5px solid #ff80ab;
+            padding: 10px;
+            border-radius: 20px;
+            background: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 15px;
+            filter: grayscale(100%) contrast(120%) brightness(1.2);
+            transform: scale(1) rotate(-2deg);
+            transition: all 0.3s ease;
+        }
+
+        .image-container img:hover {
+            filter: grayscale(0%) contrast(100%) brightness(1);
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        .buttons {
+            margin: 20px auto;
+        }
+
+        button {
+            font-size: 1em;
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 20px;
+            background-color: #ff80ab;
+            color: white;
+            cursor: pointer;
+            animation: bounce 1s infinite;
+        }
+
+        button:hover {
+            background-color: #ff4081;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        @keyframes float {
+            0% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-20px); }
+            100% { transform: translateX(-50%) translateY(0); }
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 1em;
+            color: #ff80ab;
+            animation: fadeIn 3s ease-in-out infinite alternate;
+        }
+
+        .message-container {
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 1.2em;
+            color: #ff4081;
+            border: 2px solid #ff80ab;
+            border-radius: 10px;
+            background-color: #fff;
+            display: none; /* Initially hidden */
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .buttons button {
+                font-size: 0.9em;
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday, Nikita Didi!</h1>
+    <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+    <p>Wishing you a day filled with love, laughter, and joy!</p>
+
+    <div class="image-container">
+        <img src="niki didi.jpeg
+        " alt="A special photo of Nikita Didi celebrating her birthday">
+    </div>
+
+    <div class="buttons">
+        <button onclick="showMessage('You are amazing!')">Click Me!</button>
+        <button onclick="changeColor()">Surprise Me!</button>
+        <button onclick="showMessage('Have a fantastic day!')">Another Click!</button>
+    </div>
+
+    <div class="message-container" id="messageContainer"></div>
+
+    <div class="footer">
+        <p>May all your dreams come true!</p>
+    </div>
+    
+    <div class="buttons">
+        <button onclick="openVideo()">A Small Gift for You</button>
+        
+    </div>
+
+    <script>
+        function showMessage(message) {
+            const messageContainer = document.getElementById('messageContainer');
+            messageContainer.textContent = message;
+            messageContainer.style.display = 'block';
+            setTimeout(() => {
+                messageContainer.style.display = 'none';
+            }, 3000); // Hide after 3 seconds
+        }
+
+        function changeColor() {
+            document.body.style.backgroundColor = '#ffe0b2';
+            alert("Surprise! The background color changed!");
+        }
+        
+        function openVideo() {
+            window.open('https://youtu.be/kjDWow-GK6o', '_blank');
+        }
+
+    </script>
+</body>
+</html>
